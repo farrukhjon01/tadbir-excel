@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0F1729">
+<title>Excel для работы — Tadbir Career</title>
+<link rel="preload" href="fonts/inter-cyr.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Inter';font-weight:400 800;font-display:swap;src:url(fonts/inter-cyrext.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:'Inter';font-weight:400 800;font-display:swap;src:url(fonts/inter-cyr.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Inter';font-weight:400 800;font-display:swap;src:url(fonts/inter-lat.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212,U+FEFF}
+:root{--g:#0E7A4A;--a:#1FB873;--d:#0F1729;--t:#3F4F47;--b:#D5DFDA;--l:#E1F3EA}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--t);background:#fff;line-height:1.55}
+.w{max-width:640px;margin:0 auto;padding:0 20px}
+header{background:var(--d);color:#fff;padding:14px 0}
+header .w{display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700}
+.logo i{width:30px;height:30px;border-radius:8px;background:var(--g);display:grid;place-items:center;font-style:normal}
+.lang button{background:none;border:1px solid #232F4B;color:#B7C2D6;padding:6px 12px;border-radius:8px;font:inherit;font-size:13px;cursor:pointer}
+.lang button.on{background:var(--g);border-color:var(--g);color:#fff}
+.hero{background:var(--d);color:#fff;padding:36px 0 44px}
+.hero h1{font-size:30px;line-height:1.2;margin:0 0 12px}
+.hero p{margin:0 0 22px;color:#B7C2D6;font-size:17px}
+.stat{display:flex;gap:14px;align-items:center;background:#232F4B;border-radius:14px;padding:14px 16px;margin-bottom:22px}
+.stat b{font-size:34px;color:var(--a);line-height:1}
+.stat span{font-size:14px;color:#B7C2D6}
+.btn{display:block;width:100%;text-align:center;background:var(--g);color:#fff;border:0;border-radius:12px;padding:15px;font:inherit;font-size:17px;font-weight:700;cursor:pointer;text-decoration:none}
+.btn:disabled{opacity:.6}
+section{padding:30px 0}
+h2{font-size:22px;color:var(--d);margin:0 0 14px}
+ul{margin:0;padding:0;list-style:none}
+li{padding:10px 0 10px 30px;position:relative;border-bottom:1px solid var(--b)}
+li:before{content:"✓";position:absolute;left:0;color:var(--g);font-weight:700}
+.card{background:var(--l);border-radius:14px;padding:16px;margin-top:6px}
+.price{font-size:26px;font-weight:800;color:var(--g)}
+form{display:grid;gap:12px}
+label{font-size:14px;font-weight:600;color:var(--d)}
+input,select{width:100%;padding:13px;border:1px solid var(--b);border-radius:10px;font:inherit;font-size:16px;margin-top:4px;background:#fff}
+.hp{position:absolute;left:-9999px}
+.note{font-size:13px;color:var(--t)}
+.msg{padding:14px;border-radius:10px;display:none;font-weight:600}
+.ok{background:var(--l);color:var(--g)}.err{background:#FDECEC;color:#B42318}
+footer{padding:20px 0 40px;font-size:12px;color:#7a8a82}
+</style></head><body>
+<header><div class="w"><div class="logo"><i>T</i>Tadbir Career</div>
+<div class="lang"><button id="bru" class="on">RU</button> <button id="btg">TJ</button></div></div></header>
+
+<div class="hero"><div class="w">
+<h1 data-ru="Excel для работы: от основ до уверенного уровня" data-tg="Excel барои кор: аз асосҳо то сатҳи боэътимод"></h1>
+<p data-ru="Практический курс Tadbir Career. Учимся на задачах, которые встречаются в офисе каждый день." data-tg="Курси амалии Tadbir Career. Мо дар масъалаҳое меомӯзем, ки дар офис ҳар рӯз вомехӯранд."></p>
+<div class="stat"><b>23%</b><span data-ru="офисных вакансий Таджикистана упоминают Excel (по базе вакансий Tadbir Career, ноябрь 2026)" data-tg="эълонҳои кории офисии Тоҷикистон Excel-ро зикр мекунанд (аз рӯи базаи вакансияҳои Tadbir Career, ноябри 2026)"></span></div>
+<a class="btn" href="#form" data-ru="Оставить заявку" data-tg="Дархост гузоштан"></a>
+</div></div>
+
+<section><div class="w">
+<h2 data-ru="Чему научитесь" data-tg="Чӣ меомӯзед"></h2>
+<ul>
+<li data-ru="Работать с таблицами быстро: форматы, фильтры, сортировка, горячие клавиши" data-tg="Бо ҷадвалҳо зуд кор кардан: форматҳо, филтрҳо, ҷудокунӣ, тугмаҳои тез"></li>
+<li data-ru="Считать формулами: СУММ, ЕСЛИ, ВПР и их сочетания" data-tg="Бо формулаҳо ҳисоб кардан: СУММ, ЕСЛИ, ВПР ва омезиши онҳо"></li>
+<li data-ru="Собирать отчёты сводными таблицами за минуты" data-tg="Бо ҷадвалҳои ҷамъбастӣ ҳисобот тайёр кардан дар чанд дақиқа"></li>
+<li data-ru="Строить понятные диаграммы для руководителя" data-tg="Диаграммаҳои фаҳмо барои роҳбар сохтан"></li>
+<li data-ru="Приводить в порядок «грязные» данные" data-tg="Маълумоти «беҳисоб»-ро тоза ва ба тартиб овардан"></li>
+<li data-ru="Использовать готовые шаблоны отчётов в своей работе" data-tg="Қолабҳои тайёри ҳисоботро дар кори худ истифода бурдан"></li>
+</ul></div></section>
+
+<section style="padding-top:0"><div class="w">
+<h2 data-ru="Для кого" data-tg="Барои кӣ"></h2>
+<p data-ru="Сотрудники офисов, бухгалтеры, студенты и те, кто ищет работу." data-tg="Кормандони офис, ҳисобдорон, донишҷӯён ва онҳое, ки кор меҷӯянд."></p>
+<div class="card"><p style="margin:0 0 6px" data-ru="Видеоуроки и практические задания. Курс ведёт практикующий эксперт." data-tg="Дарсҳои видеоӣ ва супоришҳои амалӣ. Курсро мутахассиси амалкунанда мебарад."></p>
+<div class="price">450 <span data-ru="сомони" data-tg="сомонӣ"></span></div></div>
+</div></section>
+
+<section id="form" style="background:#F6F9F7"><div class="w">
+<h2 data-ru="Оставьте заявку" data-tg="Дархост гузоред"></h2>
+<form id="f" novalidate>
+<label><span data-ru="Имя" data-tg="Ном"></span><input id="n" maxlength="80" autocomplete="name"></label>
+<label><span data-ru="Телефон" data-tg="Телефон"></span><input id="p" type="tel" inputmode="tel" placeholder="+992 ___ __ __ __" autocomplete="tel"></label>
+<label><span data-ru="Для чего вам Excel?" data-tg="Excel барои чӣ лозим аст?"></span>
+<select id="g"><option value="work" data-ru="Для работы" data-tg="Барои кор"></option><option value="job_search" data-ru="Для поиска работы" data-tg="Барои ҷустуҷӯи кор"></option><option value="study" data-ru="Для учёбы" data-tg="Барои таҳсил"></option><option value="other" data-ru="Другое" data-tg="Дигар"></option></select></label>
+<input class="hp" id="w" tabindex="-1" autocomplete="off" aria-hidden="true">
+<button class="btn" id="s" type="submit" data-ru="Оставить заявку" data-tg="Дархост гузоштан"></button>
+<div class="msg ok" id="ok" data-ru="Спасибо! Мы позвоним вам в течение суток." data-tg="Ташаккур! Мо дар давоми як шабонарӯз занг мезанем."></div>
+<div class="msg err" id="er"></div>
+<p class="note" data-ru="Первый поток откроем, когда наберётся 10 человек. Место можно забронировать за 50 сомони: они идут в счёт цены курса. Если курс не состоится или вы передумаете до старта, вернём бронь полностью." data-tg="Гурӯҳи аввалро вақте мекушоем, ки 10 нафар ҷамъ шаванд. Ҷойро бо 50 сомонӣ банд кардан мумкин аст: ин пул ба нархи курс ҳисоб мешавад. Агар курс баргузор нашавад ё пеш аз оғоз фикратонро иваз кунед, бронро пурра бармегардонем."></p>
+</form></div></section>
+<footer><div class="w">© Tadbir Career</div></footer>
+
+<script>
+var PID='tadbiri-kor',KEY='AIzaSyB81Ny3D8UxhFiUt4hMuExi8in8FDPxnuY',L='ru',Q=new URLSearchParams(location.search);
+function setLang(l){L=l;document.documentElement.lang=l==='tg'?'tg':'ru';
+document.querySelectorAll('[data-ru]').forEach(function(e){e.textContent=e.getAttribute('data-'+l)});
+document.getElementById('bru').className=l==='ru'?'on':'';document.getElementById('btg').className=l==='tg'?'on':'';
+document.getElementById('p').placeholder='+992 ___ __ __ __';
+try{localStorage.setItem('lang',l)}catch(e){}}
+document.getElementById('bru').onclick=function(){setLang('ru')};
+document.getElementById('btg').onclick=function(){setLang('tg')};
+var sv='ru';try{sv=localStorage.getItem('lang')||'ru'}catch(e){}
+setLang(Q.get('lang')==='tg'||Q.get('lang')==='ru'?Q.get('lang'):sv);
+function err(ru,tg){var e=document.getElementById('er');e.textContent=L==='tg'?tg:ru;e.style.display='block'}
+document.getElementById('f').addEventListener('submit',function(ev){
+ev.preventDefault();var ok=document.getElementById('ok'),er=document.getElementById('er');ok.style.display=er.style.display='none';
+var name=document.getElementById('n').value.trim(),d=document.getElementById('p').value.replace(/\D/g,'');
+if(d.length===12&&d.indexOf('992')===0)d=d.slice(3);
+if(name.length<2){return err('Введите имя','Номро нависед')}
+if(d.length!==9){return err('Введите номер: 9 цифр, например 900123456','Рақамро ворид кунед: 9 рақам, масалан 900123456')}
+if(document.getElementById('w').value){ok.style.display='block';return}
+var b=document.getElementById('s');b.disabled=true;
+var S=function(v){return{stringValue:String(v).slice(0,80)}};
+fetch('https://firestore.googleapis.com/v1/projects/'+PID+'/databases/(default)/documents/course_leads?key='+KEY,{method:'POST',headers:{'Content-Type':'application/json'},
+body:JSON.stringify({fields:{name:S(name),phone:S('+992'+d),goal:S(document.getElementById('g').value),lang:S(L),src:S(Q.get('src')||'direct'),course:S('excel')}})})
+.then(function(r){if(!r.ok)throw 0;ok.style.display='block';document.getElementById('f').reset()})
+.catch(function(){err('Не получилось отправить. Напишите нам: t.me/tadbiri_kor','Фиристода нашуд. Ба мо нависед: t.me/tadbiri_kor')})
+.finally(function(){b.disabled=false})});
+</script></body></html>
